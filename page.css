@@ -1,0 +1,103 @@
+body {
+    background-color: #040007;
+    background-image: url(background.png);
+
+    color: aliceblue;
+
+    margin: 0;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1 {
+    z-index: 10;
+    
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: clamp(2rem, 12vw + 1rem, 8rem);
+
+    margin: 0;
+
+    text-align: center;
+
+    user-select: none;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flexrow {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+}
+
+.flexcol {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-heading {
+    margin: 0 0 1.2rem 0;
+    text-align: center;
+    color: #fff8dd;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.card {
+    display: inline-block;
+    padding: 8px;
+    width: fit-content;
+    height: fit-content;
+    background-color: #181818;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.card-container {
+    padding: 2px;
+    margin: 0.8rem;
+    width: fit-content;
+    height: fit-content;
+    background-color: #242424;
+    box-shadow: 8px 8px #00000050;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: filter .3s, transform .3s;
+}
+.card-container:hover {
+    transform: scale(1.08);
+    filter: brightness(130%);
+}
+
+.rainbow-border {
+    background: conic-gradient(from var(--angle), #9f85bc, #3559cf, #bc859a, #d43356, #9f85bc);
+}
+.rainbow-border:hover {
+    animation: 2s degree-spin linear infinite;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes degree-spin{
+    from { --angle: 0deg; }
+    to { --angle: 360deg; }
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+}
